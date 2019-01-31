@@ -34,7 +34,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 @EnableScheduling
-@MapperScan("springboot.dao")
+@MapperScan("springboot.dao")//扫描dao层
 public class StartApplication {
 
     @Resource
@@ -51,7 +51,6 @@ public class StartApplication {
         app.run(args);
 
     }
-
 
     // datasource注入
     @Bean
@@ -70,36 +69,34 @@ public class StartApplication {
         return sqlSessionFactoryBean.getObject();
     }
 
-
     //事务支持
     @Bean
     public PlatformTransactionManager transactionManager() {
         return new DataSourceTransactionManager(dataSource());
     }
 
-//    // 配置8080端口自动转向8443
-//    @Bean
-//    public EmbeddedServletContainerFactory servletContainer() {
-//        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
-//            @Override
-//            protected void postProcessContext(Context context) {
-//                SecurityConstraint securityConstraint = new SecurityConstraint();
-//                securityConstraint.setUserConstraint("CONFIDENTIAL");
-//                SecurityCollection collection = new SecurityCollection();
-//                collection.addPattern("/*");
-//                securityConstraint.addCollection(collection);
-//                context.addConstraint(securityConstraint);
-//            }
-//        };
-//
-//        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
-//        connector.setScheme("http");
-//        connector.setPort(Integer.valueOf(httpPortCfg.getHttp_port()));
-//        connector.setSecure(false);
-//        connector.setRedirectPort(Integer.valueOf(httpPortCfg.getHttps_port()));
-//
-//        tomcat.addAdditionalTomcatConnectors(connector);
-//        return tomcat;
-//    }
-
+    // // 配置8080端口自动转向8443
+    // @Bean
+    // public EmbeddedServletContainerFactory servletContainer() {
+    //     TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
+    //         @Override
+    //         protected void postProcessContext(Context context) {
+    //             SecurityConstraint securityConstraint = new SecurityConstraint();
+    //             securityConstraint.setUserConstraint("CONFIDENTIAL");
+    //             SecurityCollection collection = new SecurityCollection();
+    //             collection.addPattern("/*");
+    //             securityConstraint.addCollection(collection);
+    //             context.addConstraint(securityConstraint);
+    //         }
+    //     };
+    //
+    //     Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+    //     connector.setScheme("http");
+    //     connector.setPort(Integer.valueOf(httpPortCfg.getHttp_port()));
+    //     connector.setSecure(false);
+    //     connector.setRedirectPort(Integer.valueOf(httpPortCfg.getHttps_port()));
+    //
+    //     tomcat.addAdditionalTomcatConnectors(connector);
+    //     return tomcat;
+    // }
 }

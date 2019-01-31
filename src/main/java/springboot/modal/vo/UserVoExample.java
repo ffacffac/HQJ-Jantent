@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author tangj
- * @date 2018/1/21 15:02
+ * 2018/1/21 15:02
  */
 public class UserVoExample {
     protected String orderByClause;
@@ -19,7 +19,7 @@ public class UserVoExample {
     private Integer offset;
 
     public UserVoExample() {
-        oredCriteria = new ArrayList<Criteria>();
+        oredCriteria = new ArrayList<>();
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -60,9 +60,8 @@ public class UserVoExample {
         return criteria;
     }
 
-    protected Criteria createCriteriaInternal() {
-        Criteria criteria = new Criteria();
-        return criteria;
+    private Criteria createCriteriaInternal() {
+        return new Criteria();
     }
 
     public void clear() {
@@ -92,7 +91,7 @@ public class UserVoExample {
 
         protected GeneratedCriteria() {
             super();
-            criteria = new ArrayList<Criterion>();
+            criteria = new ArrayList<>();
         }
 
         public boolean isValid() {
@@ -790,6 +789,7 @@ public class UserVoExample {
     }
 
     /**
+     *
      */
     public static class Criteria extends GeneratedCriteria {
 

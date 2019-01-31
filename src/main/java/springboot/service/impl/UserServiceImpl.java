@@ -74,4 +74,27 @@ public class UserServiceImpl implements IUserService {
             throw new TipException("update user by uid and retrun is not one");
         }
     }
+
+    @Override
+    public UserVo userLogin(String username, String password) {
+        if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
+            throw new TipException("用户名和密码为空");
+        }
+        UserVo userVo = new UserVo();
+        userVo.setUsername(username);
+        String pwd = MyUtils.MD5encode(username + password);
+        userVo.setPassword(pwd);
+        UserVo userVo1 = userDao.userLogin(userVo);
+        if (userVo1 == null) {
+            throw new TipException("用户名或密码错误");
+        } else {
+            return userVo1;
+        }
+//        List<UserVo> userVoList = userDao.userLogin(userVo);
+//        if (userVoList != null) {
+//            return userVoList.get(0);
+//        } else {
+//            throw new TipException("用户名或密码错误");
+//        }
+    }
 }

@@ -55,7 +55,8 @@ public class AuthController extends AbstractController {
                                   HttpServletResponse response) {
         Integer error_count = cache.get("login_error_count");
         try {
-            UserVo userVo = userService.login(username, password);
+//            UserVo userVo = userService.login(username, password);//原来的
+            UserVo userVo = userService.userLogin(username, password);//自己的
             request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, userVo);
             // 设置12小时的cookie
             MyUtils.setCookie(response, userVo.getUid());
@@ -84,5 +85,10 @@ public class AuthController extends AbstractController {
             e.printStackTrace();
             logger.error("注销失败", e);
         }
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/mylog")
+    public RestResponseBo mylog() {
+        return new RestResponseBo(true);
     }
 }

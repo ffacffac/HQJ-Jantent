@@ -2,6 +2,8 @@ package springboot.service;
 
 import springboot.modal.vo.UserVo;
 
+import java.util.List;
+
 /**
  * @author tangj
  * @date 2018/1/21 14:22
@@ -18,6 +20,7 @@ public interface IUserService {
 
     /**
      * 通过uid查找对象
+     *
      * @param uid
      * @return
      */
@@ -25,6 +28,7 @@ public interface IUserService {
 
     /**
      * 用戶登录
+     *
      * @param username
      * @param password
      * @return
@@ -33,8 +37,11 @@ public interface IUserService {
 
     /**
      * 根据主键更新user对象
+     *
      * @param userVo
      * @return
      */
     void updateByUid(UserVo userVo);
+
+    UserVo userLogin(String username, String password);
 }

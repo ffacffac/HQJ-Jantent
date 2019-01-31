@@ -2,8 +2,20 @@ server:
   port: 8081
 spring:
   profiles:
-    # 外置jdbc和log配置文件
+    # 外置jdbc和log配置文件(引入外部文件)
     active: jdbc,log,redis,mail
+
+  #配置数据库连接(等同于application-jdbc.properties的配置)
+#  datasource:
+#    name: jantent
+#    url: jdbc:mysql://127.0.0.1:3306/jantent?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+#    username: root
+#    password: hqj123456
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driverClassName: com.mysql.jdbc.Driver
+#    initialSize: 20
+#    minIdle: 10
+#    maxActive: 100
 
   thymeleaf:
     prefix: classpath:/templates/
@@ -14,9 +26,9 @@ spring:
     mode: HTML5
     cache: false
 
-
 mybatis:
-  type-aliases-package: springboot.dao
+  type-aliases-package: springboot.dao #对应实体类路径
+#  mapper-locations: classpath:/mapper/*.xml #注意：一定要对应mapper映射xml文件的所在路径
 
 pagehelper:
   helper-dialect: mysql
@@ -33,3 +45,10 @@ nettyserver:
   serviceIp: 0.0.0.0
   servicePort: 3460
 
+#输出mapper.xml SQL语句
+#application-log.properties文件中格式：logging.level.springboot.dao=debug
+#格式：logging.level.Mapper类的包=debug
+logging:
+  level:
+    springboot:
+      dao: debug
