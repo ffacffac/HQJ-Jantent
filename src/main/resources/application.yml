@@ -6,16 +6,16 @@ spring:
     active: jdbc,log,redis,mail
 
   #配置数据库连接(等同于application-jdbc.properties的配置)
-#  datasource:
-#    name: jantent
-#    url: jdbc:mysql://127.0.0.1:3306/jantent?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-#    username: root
-#    password: hqj123456
-#    type: com.alibaba.druid.pool.DruidDataSource
-#    driverClassName: com.mysql.jdbc.Driver
-#    initialSize: 20
-#    minIdle: 10
-#    maxActive: 100
+  #  datasource:
+  #    name: jantent
+  #    url: jdbc:mysql://127.0.0.1:3306/jantent?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+  #    username: root
+  #    password: hqj123456
+  #    type: com.alibaba.druid.pool.DruidDataSource
+  #    driverClassName: com.mysql.jdbc.Driver
+  #    initialSize: 20
+  #    minIdle: 10
+  #    maxActive: 100
 
   thymeleaf:
     prefix: classpath:/templates/
