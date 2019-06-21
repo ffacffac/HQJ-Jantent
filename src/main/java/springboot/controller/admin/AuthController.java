@@ -2,6 +2,7 @@ package springboot.controller.admin;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 登录控制
@@ -93,5 +96,21 @@ public class AuthController extends AbstractController {
             e.printStackTrace();
             logger.error("注销失败", e);
         }
+    }
+
+    @RequestMapping(value = "/userlist", method = RequestMethod.GET)
+    @ResponseBody
+    public List<UserVo> getUser() {
+        List<UserVo> userVos = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            UserVo userVo = new UserVo();
+            userVo.setUid(i + 1);
+            userVo.setUsername("张三" + i);
+            userVo.setPassword("123456");
+            userVo.setEmail("1851665187@qq.com");
+            userVo.setGroupName("管理员");
+            userVos.add(userVo);
+        }
+        return userVos;
     }
 }

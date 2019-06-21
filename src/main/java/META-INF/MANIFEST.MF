@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Class-Path: spring-boot-starter-tomcat-1.5.1.RELEASE.jar validation-ap
+ i-1.1.0.Final.jar tools.jar spring-data-commons-1.13.0.RELEASE.jar th
+ ymeleaf-spring4-3.0.0.RELEASE.jar classmate-1.3.3.jar tomcat-embed-el
+ -8.5.11.jar jedis-2.9.0.jar spring-boot-starter-thymeleaf-1.5.1.RELEA
+ SE.jar jsoup-1.8.3.jar mybatis-spring-boot-starter-1.2.0.jar spring-e
+ xpression-4.3.6.RELEASE.jar spring-core-4.3.6.RELEASE.jar jackson-ann
+ otations-2.8.0.jar hibernate-validator-5.3.4.Final.jar spring-data-ke
+ yvalue-1.2.0.RELEASE.jar spring-tx-4.3.6.RELEASE.jar jboss-logging-3.
+ 3.0.Final.jar gson-2.8.0.jar spring-boot-starter-mail-1.5.1.RELEASE.j
+ ar spring-boot-starter-logging-1.5.1.RELEASE.jar json-20140107.jar pa
+ gehelper-spring-boot-starter-1.1.0.jar snakeyaml-1.17.jar spring-data
+ -redis-1.8.0.RELEASE.jar groovy-2.4.7.jar jsqlparser-0.9.5.jar spring
+ -web-4.3.6.RELEASE.jar log4j-over-slf4j-1.7.22.jar tomcat-jdbc-8.5.11
+ .jar spring-boot-1.5.1.RELEASE.jar unbescape-1.1.3.RELEASE.jar aspect
+ jweaver-1.8.9.jar jackson-core-2.8.6.jar mysql-connector-java-5.1.35.
+ jar thymeleaf-expression-processor-1.1.0.jar spring-jdbc-4.3.6.RELEAS
+ E.jar spring-boot-autoconfigure-1.5.1.RELEASE.jar spring-boot-starter
+ -aop-1.5.1.RELEASE.jar spring-oxm-4.3.6.RELEASE.jar thymeleaf-3.0.0.R
+ ELEASE.jar mybatis-spring-1.3.1.jar jcl-over-slf4j-1.7.22.jar pagehel
+ per-spring-boot-autoconfigure-1.1.0.jar commonmark-ext-gfm-tables-0.1
+ 0.0.jar tomcat-juli-8.5.11.jar spring-boot-configuration-processor-1.
+ 5.1.RELEASE.jar commons-lang3-3.5.jar spring-boot-starter-web-1.5.1.R
+ ELEASE.jar emoji-java-3.2.0.jar logback-core-1.1.9.jar tomcat-embed-w
+ ebsocket-8.5.11.jar spring-aop-4.3.6.RELEASE.jar tomcat-embed-core-8.
+ 5.11.jar spring-boot-starter-jdbc-1.5.1.RELEASE.jar slf4j-api-1.7.22.
+ jar thymeleaf-layout-dialect-2.0.0.jar mybatis-spring-boot-autoconfig
+ ure-1.2.0.jar netty-all-4.1.17.Final.jar spring-context-4.3.6.RELEASE
+ .jar spring-beans-4.3.6.RELEASE.jar spring-boot-starter-1.5.1.RELEASE
+ .jar logback-classic-1.1.9.jar activation-1.1.jar jul-to-slf4j-1.7.22
+ .jar jconsole.jar android-json-0.0.20131108.vaadin1.jar spring-webmvc
+ -4.3.6.RELEASE.jar pagehelper-5.0.0.jar druid-1.0.18.jar commons-pool
+ 2-2.4.2.jar mybatis-3.4.2.jar spring-context-support-4.3.6.RELEASE.ja
+ r javax.mail-1.5.6.jar attoparser-2.0.0.RELEASE.jar commonmark-0.10.0
+ .jar spring-boot-devtools-1.5.1.RELEASE.jar jackson-databind-2.8.6.ja
+ r spring-boot-starter-data-redis-1.5.1.RELEASE.jar
+Main-Class: springboot.StartApplication
+
